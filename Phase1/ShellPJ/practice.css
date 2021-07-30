@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Satisfy&display=swap');
+
+.boxmdl{
+    border-style: double;
+    background-color: white;
+    border-radius: 15px;
+    margin-right: 20%;
+    margin-left: 20%;
+    text-align: center;
+    /*  padding-right: 10%;
+    padding-left: 10%; */
+}
+body {
+    font-family: 'Courgette', cursive;
+    font-weight: 100;
+    color: black;
+}
+#ty{
+    
+    color: red;
+    border-color: red;
+    font-weight: bold;
+
+}
+header{
+    font-family: 'Style Script', cursive;
+    color: green;
+    
+}
+span{
+    font-weight: bold;
+    font-size: 40;
+}
+p{
+    border-color: black;
+}
+
+
