@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="simplyblogging_func.js"></script>
+    <link rel="stylesheet" href="simplyblogging_styles.css">
+
+    </head>
+
+<body>
+    <h1>Simply Blogging</h1>
+     <div class = "container-fluid" >
+        <div class = 'row'>
+            <div class = 'col-4'style = "border-color: black; padding-right: 2px; font-size: 20px; color: #f64c72; font-weight: bold; text-align: left">
+                *\_(^ O ^)_/*
+            </div>
+            <div class = 'col-8'>
+                <ul class="nav justify-content-right">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#!">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#!">CONTACT US</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#!">PROFILE</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+      
+      
+    <table style = "margin-top: 50px;margin-left: 10%">
+        <tbody>
+            <tr>
+                <td><label for="">Title</label></td>
+                <td><input type="text" id="title"></td>
+            </tr>
+            <tr>
+                <td><label for="">Articles</label></td>
+                <td><input type="text" id="articles"></td>
+            </tr>
+            <tr>
+                <td><Label>Image URL</label></td>
+                <td><input type="text" id="image_url"></td>
+            </tr>
+        </tbody>
+        
+    </table>
+    <table style = "margin-top:15px ; margin-left: 10%">
+        <tbody>
+            <tr >
+                <td><input style = "border-width: medium; color :#f84c72; background-color: #2f2fa2; border-color: #f84c72" class = "btn btn-primary" type="button" value="Add Blog" onclick = "addBlogs()"></td>
+                <td><input style = "margin-left: 15px; border-width: medium; color: #f84c72; background-color: #2f2fa2; border-color: #f84c72" class = "btn btn-primary" type="reset" value="Clear" onclick = "clearData()"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <div id = "con" class = "container-fluid" style= "margin-left: 25%">
+        <!--<div class = 'row'>
+            <div class = 'col-6' id = "1"></div>
+            <div class = 'col-6' id = "2"></div>
+        </div>
+        <div class = 'row' >
+            <div class = 'col-6' id = "3"></div>
+            <div class = 'col-6' id = "4"></div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col-6' id = "5"></div>
+            <div class = 'col-6' id = "6"></div>
+        </div>-->
+    </div>
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

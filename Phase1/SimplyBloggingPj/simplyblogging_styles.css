@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+
+body{
+    font-family:'Arvo', serif;
+    font-weight: bolder;
+    background-color: #2f2fa2;
+    color:white;
+}
+h1{
+    text-align: center;
+    color: #f64c72;
+}
+ul{
+    background-color: #242582;
+    /*color: white;*/
+}
+img{
+    height:200px;
+    width: 200px;
+}
