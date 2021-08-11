@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Rubik:wght@800&display=swap');
+body{
+    font-family: 'Rubik', sans-serif;
+    /*font-weight:900;*/
+    color:black;
+    background-color: #E1F5C4;
+}
+h1{
+    text-align: center;
+    font-weight: bolder;
+    color:#E1F5C4;
+    background-color: #FF4E50;
+    padding: 4%;
+    margin:4%;
+    border-radius: 10px;
+} 
+.container{
+    margin-left:auto;
+    margin-right:auto;
+}
+table{
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    border-collapse: collapse;
+    background-color: #EDE574;
+    border-color:#FC913A; 
+
+}  
+th{
+    font-weight: bolder;
+    color:#FF4E50;
+    text-align:justify;
+    
+}
+td{
+    margin:2%;
+}
+#total{
+    margin-top:5%;
+    margin-left:20%;
+    color:#FF4E50;
+    font-size:x-large;
+}
+img{
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+}
+

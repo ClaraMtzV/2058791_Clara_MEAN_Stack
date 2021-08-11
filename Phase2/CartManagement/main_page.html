@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <script src="items_display.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onLoad = "displayItems()">
+    <h1>✂ OFFICE SHOP ✏🖍</h1>
+    
+    <div class = 'container' >
+        <div class = "row">
+            <div class = "col-6">
+                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVpKXmSOgcM1PiLsw9Aj3yn4z6j-EOYVNIAg&usqp=CAU"
+                 style = 'height: 50px; width:60px; margin-right:0px; border-color:#FF4E50; border-style: solid;' alt = "Cart size">
+                 <div id = 'size' style = "margin-left:0px; color:#FF4E50">(0)</div>
+            </div>
+            <div class = 'col-6' id = 'checkout' style = 'text-align: right;' >
+                <a href="checkout_page.html">
+                    <button style = "border-radius: 5px; height: 50px; font-size: x-large; 
+                    color:#FF4E50; border-color:#FF4E50; background-color:white; margin-right:5px">Check out -></button>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class = 'container' id = "items"></div>
+    
+
+</body>
+</html>
