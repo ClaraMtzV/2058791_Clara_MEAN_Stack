@@ -1,0 +1,80 @@
+<!-- login page or component-->
+<div *ngIf="login">
+  <h2>Login Page</h2>
+  <form [formGroup]="loginRef" >
+    <label>UserName: </label>
+    <input type="text" formControlName="user" (change) = "clearMsg()"/>
+    <br />
+    <label>Password: </label>
+    <input type="password" formControlName="pass"/>
+    <br>
+    <input type="button" style = "margin-left:15%; margin-right:3px" value="Submit" (click) = "checkData()"/>
+    <input type="button" value="Reset" style = "margin-left:2px" style (click) = "reset()"/>
+    <input type="button" value="Sign Up" style = "margin-left: 75%" (click)="goToSignUpFromLogin()"  />
+  </form>
+  <span>{{ msg_log }}</span>
+  
+</div>
+
+<!--sign up page or component-->
+<div *ngIf="signup">
+  <h2>Sign Up</h2>
+  <Form>
+    First Name: <input type="text" #first_nRef (change) = "clearMsg()">
+    <br />
+    Last Name: <input type="text" #last_nRef />
+    <br />
+    User Name: <input type="text" #user_nRef />
+    <br />
+    Password: <input type="password" #passRef />
+    <br />
+    <input
+      type="button"
+      value="Submit"
+      (click)="storeData(first_nRef, last_nRef, user_nRef, passRef)"
+    />
+    
+    <input type="button" style = "margin-left: 15%" value="Log in" (click)="goToLoginFromSignUp()" />
+  </Form>
+  <br />
+  <span>{{ msg_sign }}</span>
+  
+</div>
+
+<!--portfolio pate or component-->
+<div *ngIf="port">
+  <h2>My Portfolio</h2>
+  <h3>Welcome {{userindash}}!</h3>
+  <form [formGroup] = "portRef" >
+      <label>Contact Name: </label> 
+      <!-- <input type="text" formControlName = "c_name" > -->
+      <input type = "text" #contactnRef (change)="clearMsg()"/>
+      <br>
+      <label >Phone No.: </label>
+      <!-- <input type="text" formControlName = "c_phone"> -->
+      <input type = "text" #contactpRef (change) = "clearMsg()"/>
+      <br>
+      <input type="button" value="Save" (click)= "storeContacts(contactnRef,contactpRef)">
+      <br>
+  </form>
+  <span>
+    {{msg_dash}}
+  </span>
+  <br>
+  <input type="button" value="Show Contacts" (click) = "showContacts()">
+  <table border="1" *ngIf = "contacts_table" style = "margin-left:auto; margin-right:auto;">
+      <thead style = "background-color:aquamarine">
+          <tr >
+            <th>Name </th>
+            <th>Phone No. </th>
+          </tr> 
+      </thead>
+      <tbody>
+          <tr *ngFor = "let cont of contactcopyar">
+              <td>{{cont.name}}</td>
+              <td>{{cont.phone}}</td>
+          </tr>
+      </tbody>
+      <tfoot></tfoot>
+  </table>
+</div>
