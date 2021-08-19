@@ -1,0 +1,59 @@
+<div>
+    <h1>Task Tracker</h1>
+    <mat-grid-list style = "margin-top: 0.5%" cols="2" rowHeight="1:1" >
+        <mat-grid-tile style = "background-color:beige; margin-right:0.25%">
+            
+            <form #tasksRef = "ngForm" class="example-form" style = "margin-top:0%;">
+                <span>{{errormsg}}</span>
+                <br/>
+                <mat-form-field class="example-full-width" appearance= "fill">
+                    <mat-label>Employee ID</mat-label>
+                    <input  matInput [formControl] = "eid_c" placeholder="Ex. 2345682" #eid required>
+                    <mat-error *ngIf = "eid_c.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width" appearance="fill" required>
+                  <mat-label>Employee Name</mat-label>
+                  <input matInput [formControl] = "name_c" placeholder="Ex. Michael Jackson" #ename required >
+                  <mat-error *ngIf = "name_c.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <br> 
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Task</mat-label>
+                    <textarea matInput [formControl] = "taskd_c" placeholder="Ex. Test demo application" #tdesc required></textarea>
+                    <mat-error *ngIf = "taskd_c.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width" appearance="fill" >
+                    <mat-label>Deadline</mat-label>
+                    <input type = "date" matInput [formControl] = "deadl_c" placeholder="Ex. mm/dd/yyyy" #deadl required>
+                    <mat-error *ngIf = "deadl_c.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <br/>
+                <button mat-raised-button style = "margin-right: 10%" color="Accent" (click) = "storeData(eid,ename,tdesc,deadl)">Submit</button>
+                <button mat-raised-button color="Accent" (click) = "reset(eid,ename,tdesc,deadl)">Reset</button>   
+            </form>    
+        </mat-grid-tile>
+        <mat-grid-tile style = "background-color:lightcyan; margin-left:0.25%">
+            <table border = "1" *ngIf = "displayt">
+                <thead>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Project Description</th>
+                    <th>Deadline</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let tareas of tasks">
+                        <td>{{tareas.id}}</td>
+                        <td>{{tareas.name}}</td>
+                        <td>{{tareas.taskd}}</td>
+                        <td>{{tareas.dead_line}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </mat-grid-tile>
+    </mat-grid-list> 
+
+</div>
+
