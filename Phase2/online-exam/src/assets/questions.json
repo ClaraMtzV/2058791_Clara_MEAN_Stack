@@ -1,0 +1,12 @@
+[
+    {"qnumber":"1","question":"Which of these things CAN disinfect a wound?", "a":"Vodka", "b": "Soy Sauce", "c":"Smoke", "d":"Mercury", "correct":"Vodka","show":"false"},
+    {"qnumber":"2","question":"Which word in the dictionary is spelled 'Incorrectly'?", "a":"Treabuchet", "b":"Incorrectly", "c": "Concierge", "d":"Innoculus","correct":"Incorrectly","checked":"false"},
+    {"qnumber":"3","question":"Which of these things CAN you use to change a tire?", "a":"Scissors", "b":"Jack", "c":"Swivel Stick", "d":"Axle Tie","correct":"Jack","checked":"false"},
+    {"qnumber":"4","question":"What does CPR stand for?", "a":"Cardiovascular Pressure Repetition", "b": "Cardio Personnel Rescue", "c": "Creative Pressure Relaxation", "d":"Cardiopulmonary Resuscitation","correct":"Cardiopulmonary Resuscitation","checked":"false"},
+    {"qnumber":"5","question":"A Broken Clock is still right _________ a day", "a":"Twice", "b": "Thrice", "c":"Four Times", "d":"Once","correct":"Twice","checked":"false"},
+    {"qnumber":"6","question":"What should you do before giving a toast?", "a":"Scream", "b": "Clap", "c": "Tap a fork on a glass", "d":"Laugh histerically","correct":"Tap a fork on a glass","checked":"false"},
+    {"qnumber":"7","question":"What does a Barometer measure?", "a":"Temperature", "b": "Atmospheric Pressure", "c":"Humidity", "d":"Luminosity","correct":"Atmospheric Pressure","checked":"false"},
+    {"qnumber":"8","question":"Where Does Solar Energy come from?", "a":"Heat of Earth's Core", "b": "The Solaris Molecules", "c":"Wind", "d":"The Sun","correct":"The Sun","checked":"false"},
+    {"qnumber":"9","question":"What five letter word becomes shorter when you ADD two letters", "a":"Praxis", "b":"Shorter", "c":"Negative Two", "d":"Fate","correct":"Shorter","checked":"false"},
+    {"qnumber":"10","question":"What insects can chew through wood and destroy your home?", "a":"Ants", "b": "Wood Beetles", "c":"Larvae", "d":"Termites","correct":"Termites","checked":"false"}
+] 

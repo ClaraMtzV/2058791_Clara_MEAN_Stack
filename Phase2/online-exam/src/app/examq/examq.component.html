@@ -1,0 +1,66 @@
+<div>
+    <div *ngIf = "notBegin" style = "background-color:cornflowerblue;">
+        <h1>Welcome to my 'common sense' exam!</h1>
+        <p>This exam has 10 questions, and you will have one chance to submit your answer for each question. Good Luck!</p>
+        <button style = "margin-left:40%; margin-top:20%; height:50px; width:200px;font-size:40px;" mat-raised-button color = "accent" (click) = "populateQuestions()">BEGIN</button><br>
+    </div>
+    <!-- "[formGroup]="questionsForm" (ngSubmit) = "checkAnswers()" 
+    <form >*ngIf = "isCurrent(q.qnumber)"(onload) = "updateQ()"  -->
+    <div *ngIf = "!notBegin" style = "background-color:rgb(200, 245, 200);">
+        <div class = "questionsClass" *ngFor = "let q of questionsArr" style = "margin-top:3px" > 
+            <!-- <div *ngIf = "q.checked"> -->
+                <mat-radio-group  class = "questions-form" aria-label="Select an option"  [(ngModel)] = "answerPicked" name = "{{q.qnumber}}">
+                    <label id = "questionlabel" style = "margin-left:30%; font-size:x-large;">{{q.qnumber}}.-{{q.question}}</label><br/>
+                    <mat-radio-button style = "margin-left:32%; font-size:x-large;" class= "answer-radio" value="{{q.a}}">{{q.a}}</mat-radio-button><br>
+                    <mat-radio-button style = "margin-left:32%; font-size:x-large;" class= "answer-radio" value="{{q.b}}">{{q.b}}</mat-radio-button><br>
+                    <mat-radio-button style = "margin-left:32%; font-size:x-large;" class= "answer-radio" value="{{q.c}}">{{q.c}}</mat-radio-button><br>
+                    <mat-radio-button style = "margin-left:32%; font-size:x-large;" class= "answer-radio" value="{{q.d}}">{{q.d}}</mat-radio-button><br>
+                    <button mat-raised-button color="accent" style = "margin-left:32%; font-size:x-large;" (click) = "checkAnswer(q.qnumber)" [disabled] = "checked(q.qnumber)">CheckAnswer</button>  
+                </mat-radio-group> 
+            <!-- </div>   -->
+            <!-- <div *nIf = "showmsg"> -->
+                <span style = "color:rgb(127, 77, 226); font-size:medium" *ngIf = "correcta"> {{correctmsg}}</span>
+                <span style = "color:darkcyan; font-size:medium"*ngIf = "!correcta"> {{incorrectmsg}}</span>
+                
+            <!-- </div> -->
+        </div>
+        <span style = "text-align:center;margin-left:30%; font-size: xx-large; color:magenta">Your score is {{getScore()}}/{{questionsArr.length}}</span>
+        <br/><span style = "text-align:center; margin-left:30%; font-size: large;color:mediumblue">Thank you for taking my exam!😊</span>
+    </div> 
+    
+    
+    
+</div>
+
+<!-- FUNCIONO -->
+<!-- <div>
+    <button (click) = "populateQuestions()">Click here</button><br>
+    <div class = "Questions" *ngIf = "showTest">
+        <div [class] = "currentQ.question" *ngFor = ""> 
+                <mat-radio-group  class = "questions-try" aria-label="Select an option"  [(ngModel)] = "answerPicked" name = "{{currentQ.question}}">
+                    <label>{{currentQ.qnumber}}.-{{currentQ.question}}</label><br/>
+                    <mat-radio-button class= "answer-radio" value="{{currentQ.a}}">{{currentQ.a}}</mat-radio-button><br>
+                    <mat-radio-button class= "answer-radio" value="{{currentQ.b}}">{{currentQ.b}}</mat-radio-button><br>
+                    <mat-radio-button class= "answer-radio" value="{{currentQ.c}}">{{currentQ.c}}</mat-radio-button><br>
+                    <mat-radio-button class= "answer-radio" value="{{currentQ.d}}">{{currentQ.d}}</mat-radio-button><br>
+                    <button mat-raised-button color="accent" (click) = "checkAnswer(currentQ.qnumber)">Next</button><br>
+                </mat-radio-group>            
+        </div>
+        <span style ="color:red">Your score is {{getScore()}}/{{questionsArr.length}}</span>  
+    </div>
+</div> -->
+
+
+<!-- <form action="">
+    <button (click) = "populateExam()">Click here</button>
+    <ol>
+        <li *ngFor = "let q of questionsArr">
+            <p>{{q.question}}</p>
+            <input type="radio" value="{{q.a}}">{{q.a}} <br/>
+            <input type="radio" value="{{q.b}}">{{q.b}} <br/>
+            <input type="radio" value="{{q.c}}">{{q.c}} <br/>
+            <input type="radio" value="{{q.d}}">{{q.d}} <br/>
+        </li>
+    </ol>
+</form> -->
+
