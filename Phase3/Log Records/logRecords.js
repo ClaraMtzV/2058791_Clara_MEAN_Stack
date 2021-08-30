@@ -10,7 +10,7 @@ class User{
         this.email = readline.questionEMail("Please, enter your email: ");
         this.password = readline.questionNewPassword("Please, enter your desired password: ", {min: 5});  
         let today = new Date();
-        this.date_added = today.getMonth() + '-'+ today.getDate() + '-' + today.getFullYear() 
+        this.date_added = (today.getMonth()+1) + '-'+ today.getDate() + '-' + today.getFullYear() 
         + " at " + today.getHours() + ':' + today.getMinutes();
     }
 }
