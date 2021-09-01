@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Socket.io</title>
+    <script src = "/socket.io/socket.io.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        form{ 
+            background:rgb(190, 235, 190);
+            padding: 0.25rem; 
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            display: flex; 
+            height: 3rem; }
+        ul{
+            font-weight: bold;
+        }
+        #chat_history>li:nth-child(odd){background-color: rgb(151, 243, 151);}
+    </style>
+    <script type = "text/JavaScript">
+        var socket = io();
+        socket.on("server_msg", (msg)=>{
+            var chat_hsl = document.createElement('li');
+            chat_hsl.textContent = msg;
+            chat_history.appendChild(chat_hsl);
+            window.scrollTo(0, document.body.scrollHeight);
+        })   
+        send_msg = ()=>{
+            
+            var list_item = document.getElementById("cmsg").value;
+
+            if (list_item != ""){
+                let msg_cl =  "CLIENT SAYS: " + list_item;
+                socket.emit("client_msg", msg_cl );
+                var chat_hsl = document.createElement('li');
+                chat_hsl.textContent = msg_cl ;
+                chat_history.appendChild(chat_hsl);
+                document.getElementById("cmsg").value = "";
+            }
+        }    
+    </script>
+</head>
+<body style = "font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+    <h1 style = "text-align: center; color:rgb(9, 100, 9)">Welcome to my Chat using Socket.io</h1>
+    <ul id = "chat_history" style="margin-left:auto; margin-right:3px; padding:30px; list-style-type:none;"></ul>
+    <form action="" style = "text-align: center;">
+        <label style = "text-align: center; padding-top:3px; padding-bottom:auto; font-size: large; margin-right: 10px;">Message: </label>
+        <input style = "padding-left:30%; padding-right:30%; border-radius: 2px;" type="text" id = "cmsg">
+        <input style = "border-radius:15px;margin-left:3px; padding-left:2%; padding-right:2%;" type="button" value="SEND" onclick = "send_msg()">
+    </form>   
+</body>
+</html>
