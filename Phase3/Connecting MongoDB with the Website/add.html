@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Courses</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type = "text/JavaScript">
+        var socket = io();
+        socket.on("server_msg",(msg)=>{
+            let msg_cl = "I sent you the data";
+            document.getElmentById(cmsg).value = msg;
+            socket.emit("client_msg", msg_cl);
+            document.getElemtById(cmsg).value = "";
+        })
+    </script>
+</head>
+<body>
+    <h1 style = "text-align: center;">Let's add a course!</h1>
+    <form method = "POST" action = "/addCourse">
+        <label for="">Course ID:</label>
+        <input type="text" name = "_id" required><br>
+        <label for="">Course Name:</label>
+        <input type="text" name = "name" required><br>
+        <label for="">Description:</label>
+        <input type="text" name = "description" required><br>
+        <label for="">Amount:</label>
+        <input type="text" name = "amount" required><br>
+        <input type="submit" value = "ADD">
+        <input style = "margin-left:30px" type="reset" value = "RESET">
+    </form>
+    <span id = "cmsg">
+
+    </span>
+</body>
+</html>
